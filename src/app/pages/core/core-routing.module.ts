@@ -3,13 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'general-coordinators',
+    path: 'projects',
     loadChildren: () =>
-      import('./general-coordinator/general-coordinator.module').then(
-        (m) => m.GeneralCoordinatorModule
-      ),
+      import('./project/project.module').then((m) => m.ProjectModule),
   },
-
 ];
 
 @NgModule({

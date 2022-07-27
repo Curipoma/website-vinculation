@@ -1,0 +1,91 @@
+<div
+  id="sidebar"
+  class="sidebar"
+  [ngClass]="{ close: closed }"
+  (mouseleave)="closeMenu()"
+>
+  <div class="logo-details">
+    <a href="javascript:void(0);"
+      ><i class="pi pi-bars" (click)="showCloseMenu()"></i
+    ></a>
+    <span class="logo_name">IGNUG</span>
+    <a *ngIf="!closed" href="javascript:void(0);">
+      <i
+        class="pi"
+        [ngClass]="{
+          'pi-lock-open': !closedLock && !closed,
+          'pi-lock': closedLock && !closed
+        }"
+        (click)="closedLock = !closedLock"
+      >
+      </i>
+    </a>
+  </div>
+  <ul class="nav-links">
+    <!--Dashboard-->
+    <li>
+      <div class="icon-link">
+        <a [routerLink]="['/']">
+          <i class="pi pi-home"></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+      </div>
+    </li>
+
+    <!--Menus-->
+    <li
+      [id]="index"
+      *ngFor="let item of items; let index = index"
+      [ngClass]="{ showMenu: showedMenu }"
+    >
+      <div class="icon-link">
+        <a [routerLink]="item.routerLink">
+          <i [class]="item.icon"></i>
+          <span class="link_name">{{ item.label }}</span>
+        </a>
+        <i
+          *ngIf="item.items"
+          class="pi pi-chevron-down arrow"
+          (click)="showSubMenu(index)"
+        ></i>
+      </div>
+      <ul class="sub-menu">
+        <li>
+          <a class="link_name" [routerLink]="item.routerLink">{{
+            item.label
+          }}</a>
+          <a
+            *ngFor="let subItem of item.items"
+            [routerLink]="subItem.routerLink"
+            >{{ subItem.label }}</a
+          >
+        </li>
+      </ul>
+    </li>
+
+    <!--Profile-->
+    <li>
+      <div class="profile-details">
+        <div class="profile-content">
+          <a href="javascript:void(0);" (click)="showCloseMenu()">
+            <img
+              src="assets/images/layout/sidebar/user-profile.png"
+              alt="profileImg"
+            />
+          </a>
+        </div>
+        <div class="name-job">
+          <a
+            href="javascript:void(0);"
+            (click)="redirectProfile()"
+            class="profile_name"
+          >
+            {{ authService.auth.username }}
+          </a>
+          <div class="job">Web Desginer</div>
+        </div>
+        <i class="pi pi-sign-out" pTooltip="Sign Out" (click)="logout()"></i>
+      </div>
+    </li>
+  </ul>
+</div>

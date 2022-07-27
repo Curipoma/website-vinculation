@@ -1,0 +1,6 @@
+<p-breadcrumb
+  *ngIf="items?.length"
+  [model]="items"
+  [home]="home"
+></p-breadcrumb>
+<app-progress-bar *ngIf="loaded$ | async"></app-progress-bar>

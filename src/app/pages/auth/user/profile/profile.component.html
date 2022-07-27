@@ -1,0 +1,33 @@
+<p-accordion>
+  <p-accordionTab>
+    <ng-template pTemplate="header">
+      <i class="pi pi-user-edit mr-2"></i>
+      <h3>User Information</h3>
+    </ng-template>
+    <ng-template pTemplate="content">
+      <small [innerHTML]="this.messageService.requiredFields"></small>
+      <p-divider></p-divider>
+      <app-user-information></app-user-information>
+    </ng-template>
+  </p-accordionTab>
+  <p-accordionTab>
+    <ng-template pTemplate="header">
+      <i class="pi pi-key mr-2"></i>
+      <h3>Change Password</h3>
+    </ng-template>
+    <ng-template pTemplate="content">
+      <app-password-change></app-password-change>
+    </ng-template>
+  </p-accordionTab>
+  <p-accordionTab>
+    <ng-template pTemplate="header">
+      <i class="pi pi-id-card mr-2"></i>
+      <h3>Profile</h3>
+    </ng-template>
+    <ng-template pTemplate="content">
+      <small [innerHTML]="this.messageService.requiredFields"></small>
+      <p-divider></p-divider>
+      <app-user-profile></app-user-profile>
+    </ng-template>
+  </p-accordionTab>
+</p-accordion>

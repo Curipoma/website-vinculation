@@ -1,0 +1,112 @@
+<div class="loginForm">
+  <p-card>
+    <div class="p-fluid">
+      <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+        <div class="field text-center">
+          <h1>Ingreso al sistema</h1>
+          <img src="assets/images/logo.png" alt="" width="200px" />
+          <h2>IGNUG</h2>
+        </div>
+
+        <div class="field">
+          <label
+            for="username"
+            appLabel
+            label="Usuario:"
+            [required]="usernameField"
+          >
+          </label>
+          <input pInputText id="username" formControlName="username" />
+          <small
+            appErrorMessage
+            [errors]="usernameField.errors"
+            [touched]="usernameField.touched"
+            [dirty]="usernameField.dirty"
+          >
+          </small>
+        </div>
+
+        <div *ngIf="!isPasswordReset" class="field">
+          <label
+            for="password"
+            appLabel
+            label="Contraseña:"
+            [required]="passwordField"
+          >
+          </label>
+          <p-password
+            id="password"
+            formControlName="password"
+            [feedback]="false"
+          ></p-password>
+
+          <small
+            appErrorMessage
+            [errors]="passwordField.errors"
+            [touched]="passwordField.touched"
+            [dirty]="passwordField.dirty"
+          >
+          </small>
+        </div>
+
+        <p-divider></p-divider>
+
+        <div class="field col-12">
+          <button
+            *ngIf="!isPasswordReset"
+            pButton
+            pRipple
+            label="Continuar"
+            icon="pi pi-sign-in"
+          ></button>
+          <button
+            *ngIf="isPasswordReset"
+            type="button"
+            pButton
+            pRipple
+            label="Solicitar código"
+            class="p-button-info"
+            icon="pi pi-send"
+            (click)="requestPasswordReset()"
+          ></button>
+        </div>
+
+        <div class="field col-12">
+          <button
+            *ngIf="isPasswordReset"
+            type="button"
+            pButton
+            pRipple
+            label="Regresar al login"
+            class=""
+            icon="pi pi-arrow-left"
+            (click)="hidePasswordReset()"
+          ></button>
+        </div>
+
+        <div *ngIf="loaded$ | async" class="field">
+          <app-progress-bar
+            [message]="messageService.progressBarLogin"
+          ></app-progress-bar>
+        </div>
+
+        <div class="formgrid grid">
+          <div
+            *ngIf="!isPasswordReset"
+            class="field xl:col-6 lg:col-6 md:col-12 sm:col-12"
+          >
+            <button
+              pButton
+              pRipple
+              type="button"
+              label="Recuperar contraseña"
+              class="p-button-outlined p-button-info"
+              icon="pi pi-key"
+              (click)="showPasswordReset()"
+            ></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </p-card>
+</div>

@@ -1,0 +1,162 @@
+<app-skeleton *ngIf="isLoadingSkeleton" [type]="'card'"></app-skeleton>
+<p-panel
+  *ngIf="!isLoadingSkeleton"
+  class="p-fluid"
+  collapseIcon="pi pi-times"
+  [toggleable]="true"
+  (collapsedChange)="back()"
+>
+  <ng-template pTemplate="header">
+    <i *ngIf="id === 0" class="pi pi-user-plus mr-2"></i>
+    <i *ngIf="id > 0" class="pi pi-user-edit mr-2"></i>
+    <h2 class="panel-header">{{ panelHeader }}</h2>
+  </ng-template>
+  <small [innerHTML]="this.messageService.requiredFields"></small>
+  <p-divider></p-divider>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="formgrid grid">
+      <div class="field xl:col-6 lg:col-6 md:col-6 sm:col-12">
+        <label appLabel for="name" label="Name:" [required]="nameField"></label>
+        <input pInputText type="text" id="name" formControlName="name" />
+        <small
+          appErrorMessage
+          [errors]="nameField.errors"
+          [touched]="nameField.touched"
+          [dirty]="nameField.dirty"
+        >
+        </small>
+      </div>
+      <div class="field xl:col-6 lg:col-6 md:col-6 sm:col-12">
+        <label
+          appLabel
+          for="lastname"
+          label="Lastname:"
+          [required]="lastnameField"
+        ></label>
+        <input
+          pInputText
+          type="text"
+          id="lastname"
+          formControlName="lastname"
+        />
+        <small
+          appErrorMessage
+          [errors]="lastnameField.errors"
+          [touched]="lastnameField.touched"
+          [dirty]="lastnameField.dirty"
+        >
+        </small>
+      </div>
+    </div>
+    <div class="formgrid grid">
+      <div class="field xl:col-6 lg:col-6 md:col-6 sm:col-12">
+        <label
+          appLabel
+          for="username"
+          label="Username:"
+          [required]="usernameField"
+        ></label>
+        <input
+          pInputText
+          type="text"
+          id="username"
+          formControlName="username"
+          pKeyFilter="alphanum"
+        />
+        <small
+          appErrorMessage
+          [errors]="usernameField.errors"
+          [touched]="usernameField.touched"
+          [dirty]="usernameField.dirty"
+        >
+        </small>
+      </div>
+      <div class="field xl:col-6 lg:col-6 md:col-6 sm:col-12">
+        <label
+          appLabel
+          for="email"
+          label="Email:"
+          [required]="emailField"
+        ></label>
+        <input pInputText type="email" id="email" formControlName="email" />
+        <small
+          appErrorMessage
+          [errors]="emailField.errors"
+          [touched]="emailField.touched"
+          [dirty]="emailField.dirty"
+        >
+        </small>
+      </div>
+    </div>
+    <div *ngIf="id > 0" class="field">
+      <label for="isChangePassword" class="mr-4">Change Password:</label>
+      <p-inputSwitch
+        id="isChangePassword"
+        [formControl]="isChangePassword"
+        (onChange)="handleChangePassword($event)"
+      ></p-inputSwitch>
+    </div>
+    <div class="formgrid grid">
+      <div
+        *ngIf="id === 0 || isChangePassword.value"
+        class="field xl:col-6 lg:col-6 md:col-6 sm:col-12"
+      >
+        <label
+          appLabel
+          for="password"
+          label="Password:"
+          [required]="passwordField"
+        ></label>
+        <input
+          pPassword
+          type="password"
+          id="password"
+          formControlName="password"
+          [feedback]="true"
+        />
+        <small
+          appErrorMessage
+          [errors]="passwordField.errors"
+          [touched]="passwordField.touched"
+          [dirty]="passwordField.dirty"
+        >
+        </small>
+      </div>
+    </div>
+    <div *ngIf="id === 0 || isChangePassword.value" class="field">
+      <p-checkbox
+        id="passwordChanged"
+        formControlName="passwordChanged"
+        class="mt-2"
+        [binary]="true"
+        label="Require the user to change their password when they log in"
+      ></p-checkbox>
+    </div>
+    <div class="formgrid grid">
+      <div class="field xl:col-6 lg:col-6 md:col-6 sm:col-12">
+        <button
+          pButton
+          pRipple
+          id="btnBack"
+          type="button"
+          label="Cancel"
+          class="p-button-info p-button-outlined"
+          icon="pi pi-arrow-left"
+          [loading]="(loaded$ | async)!"
+          (click)="back()"
+        ></button>
+      </div>
+      <div class="field xl:col-6 lg:col-6 md:col-6 sm:col-12">
+        <button
+          pButton
+          pRipple
+          id="submit"
+          type="submit"
+          label="Save"
+          icon="pi pi-save"
+          [loading]="(loaded$ | async)!"
+        ></button>
+      </div>
+    </div>
+  </form>
+</p-panel>

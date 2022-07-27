@@ -1,0 +1,136 @@
+<!--<p-card>-->
+<p-toolbar>
+  <div class="p-toolbar-group-left">
+    <button
+      pButton
+      type="button"
+      label="Create User"
+      class="p-button-success mr-2"
+      icon="pi pi-plus"
+      (click)="redirectCreateForm()"
+    ></button>
+    <button
+      pButton
+      type="button"
+      label="Refresh"
+      class="p-button-info mr-2"
+      icon="pi pi-refresh"
+      (click)="findAll()"
+    ></button>
+    <button
+      *ngIf="selectedUsers.length > 0"
+      pButton
+      type="button"
+      label="Delete Users"
+      class="p-button-danger"
+      icon="pi pi-trash"
+      (click)="removeAll()"
+    ></button>
+  </div>
+  <div class="p-toolbar-group-right">
+    <div class="p-input-icon-right">
+      <input
+        type="text"
+        pInputText
+        [formControl]="search"
+        placeholder="Search"
+      />
+      <i
+        class="pi pi-search"
+        [ngClass]="{ 'pi-spin pi-spinner': (loaded$ | async) }"
+      ></i>
+    </div>
+  </div>
+</p-toolbar>
+<p-paginator
+  [rows]="paginator.limit"
+  [totalRecords]="paginator.totalItems"
+  (onPageChange)="paginate($event)"
+></p-paginator>
+<p-table
+  dataKey="id"
+  styleClass="p-datatable-striped"
+  [value]="users"
+  [columns]="columns"
+  [loading]="(loaded$ | async)!"
+  [(selection)]="selectedUsers"
+  [responsive]="true"
+>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th style="width: 3rem">
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </th>
+      <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+        {{ col.header }}
+        <p-sortIcon [field]="col.field"></p-sortIcon>
+      </th>
+      <th class="text-center">
+        <button
+          pButton
+          pRipple
+          type="button"
+          class="p-button-help p-button-outlined p-button-rounded"
+          icon="pi pi-cog"
+        ></button>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template
+    pTemplate="body"
+    let-rowData
+    let-columns="columns"
+    let-rowIndex="rowIndex"
+  >
+    <tr [pSelectableRow]="rowData" [pSelectableRowIndex]="rowIndex">
+      <td>
+        <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+      </td>
+
+      <td *ngFor="let col of columns">
+        <!--Objects-->
+        <div *ngIf="rowData[col.field]?.id" [ngSwitch]="col.field">
+          <div *ngSwitchCase="'bloodType'">
+            {{ rowData[col.field].name }}
+          </div>
+        </div>
+        <!--Fields-->
+        <div *ngIf="!rowData[col.field]?.id" [ngSwitch]="col.field">
+          <div *ngSwitchCase="'updatedAt'">{{ rowData[col.field] | date }}</div>
+          <div *ngSwitchDefault>{{ rowData[col.field] }}</div>
+        </div>
+      </td>
+      <td class="text-center">
+        <button
+          pButton
+          type="button"
+          class="p-button-warning p-button-rounded mr-2"
+          icon="pi pi-pencil"
+          pTooltip="Edit User"
+          (click)="redirectEditForm(rowData.id)"
+          [loading]="(loaded$ | async)!"
+        ></button>
+        <button
+          pButton
+          type="button"
+          class="p-button-danger p-button-rounded"
+          icon="pi pi-trash"
+          pTooltip="Delete User"
+          (click)="remove(rowData.id)"
+          [loading]="(loaded$ | async)!"
+        ></button>
+      </td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="emptymessage" let-columns>
+    <tr>
+      <td [attr.colspan]="columns.length">
+        {{ messageService.paginatorNoRecordsFound }}
+      </td>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="summary">
+    {{ messageService.paginatorTotalRegisters(paginator) }}
+  </ng-template>
+</p-table>
+<!--</p-card>-->

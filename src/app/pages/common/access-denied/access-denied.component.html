@@ -1,0 +1,21 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col-12">
+      <img src="assets/images/components/core/common/error-404.png" alt="" />
+    </div>
+    <div class="col-12">
+      <h1 class="text-danger">403 ¡Acceso denegado!</h1>
+      <small class="text-secondary">¡No tiene autorización para acceder!</small>
+    </div>
+    <div class="col-12">
+      <button
+        pButton
+        pRipple
+        label="Regresar al Login"
+        icon="pi pi-arrow-left"
+        class="p-button-lg"
+        [routerLink]="['/auth/login']"
+      ></button>
+    </div>
+  </div>
+</div>

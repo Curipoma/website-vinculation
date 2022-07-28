@@ -1,1 +1,68 @@
-<p>workplan works!</p>
+<p-card header="Descripcion del Proyecto">
+  <textarea rows="5" cols="200" pInputTextarea> {{ description }}</textarea>
+</p-card>
+
+<p-card header="Objetivo  del Proyecto">
+  <textarea rows="5" cols="200" pInputTextarea>{{ objective }}</textarea>
+</p-card>
+
+<p-card header="Analisis situacional (DIAGNOSTICO)">
+  <textarea rows="5" cols="200" pInputTextarea>{{ situation }}</textarea>
+</p-card>
+<p-card header="Justificacion">
+  <textarea rows="5" cols="200" pInputTextarea>{{ justification }}</textarea>
+</p-card>
+
+<h2 class="px-1 py-5">Matriz Marco Logico</h2>
+
+
+
+
+
+<h3 class="px-1 py-5">Objetivio General</h3>
+<p-table [columns]="cols" [value]="products" responsiveLayout="scroll">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{ col.header }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns">
+        {{ rowData[col.field] }}
+      </td>
+    </tr>
+  </ng-template>
+
+  
+</p-table>
+
+
+
+
+
+
+
+<h3 class="px-1 py-5">Objetivo Especifico</h3>
+
+<p-table [columns]="cols" [value]="products" responsiveLayout="scroll">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{ col.header }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns">
+        {{ rowData[col.field] }}
+      </td>
+    </tr>
+  </ng-template>
+
+  
+</p-table>
+

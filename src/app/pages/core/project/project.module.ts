@@ -6,6 +6,7 @@ import { ProjectRoutingModule } from './project-routing.module';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { ProgressBarModule } from 'primeng/progressbar';
@@ -59,6 +60,7 @@ import { SharedModule } from '@shared/shared.module';
     SliderModule,
     TableModule,
     TabViewModule,
+    InputTextareaModule,
   ],
 })
 export class ProjectModule {}

@@ -8,6 +8,7 @@ import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { MultiSelectModule } from 'primeng/multiselect';
+import { PaginatorModule } from 'primeng/paginator';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { SliderModule } from 'primeng/slider';
 import { TableModule } from 'primeng/table';
@@ -55,6 +56,7 @@ import { SharedModule } from '@shared/shared.module';
     DropdownModule,
     InputTextModule,
     MultiSelectModule,
+    PaginatorModule,
     ProgressBarModule,
     SliderModule,
     TableModule,

@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { ProjectRoutingModule } from './project-routing.module';
 
+import { CalendarModule } from 'primeng/calendar';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 import { MultiSelectModule } from 'primeng/multiselect';
 import { PaginatorModule } from 'primeng/paginator';
 import { ProgressBarModule } from 'primeng/progressbar';
+import { RadioButtonModule } from 'primeng/radiobutton';
 import { SliderModule } from 'primeng/slider';
 import { TableModule } from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
@@ -48,6 +51,7 @@ import { SharedModule } from '@shared/shared.module';
     WorkplanComponent,
   ],
   imports: [
+    CalendarModule,
     CommonModule,
     ProjectRoutingModule,
     SharedModule,
@@ -55,9 +59,11 @@ import { SharedModule } from '@shared/shared.module';
     CardModule,
     DropdownModule,
     InputTextModule,
+    InputTextareaModule,
     MultiSelectModule,
     PaginatorModule,
     ProgressBarModule,
+    RadioButtonModule,
     SliderModule,
     TableModule,
     TabViewModule,

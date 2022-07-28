@@ -34,7 +34,11 @@
 </p-card>
 
 <p-tabView [scrollable]="true">
-  <p-tabPanel header="general-data" leftIcon="pi pi-folder-open">
+  <p-tabPanel
+    header="general-data"
+    leftIcon="pi pi-folder-open"
+    [selected]="true"
+  >
     <app-general-data></app-general-data>
   </p-tabPanel>
   <p-tabPanel header="business" leftIcon="pi pi-shopping-bag">
@@ -55,7 +59,7 @@
   <p-tabPanel header="bibliographies" leftIcon="pi pi-database">
     <app-bibliographies></app-bibliographies>
   </p-tabPanel>
-  <p-tabPanel header="annexes" leftIcon="pi pi-clone" [selected]="true">
+  <p-tabPanel header="annexes" leftIcon="pi pi-clone">
     <app-annexes></app-annexes>
   </p-tabPanel>
   <p-tabPanel header="observations" leftIcon="pi pi-comments">

@@ -58,10 +58,14 @@
   <p-tabPanel header="annexes" leftIcon="pi pi-clone">
     <app-annexes></app-annexes>
   </p-tabPanel>
-  <p-tabPanel header="observations" leftIcon="pi pi-comments" [selected]="true">
+  <p-tabPanel header="observations" leftIcon="pi pi-comments">
     <app-observations></app-observations>
   </p-tabPanel>
-  <p-tabPanel header="attach-documents" leftIcon="pi pi-cloud-upload">
+  <p-tabPanel
+    header="attach-documents"
+    leftIcon="pi pi-cloud-upload"
+    [selected]="true"
+  >
     <app-attach-documents></app-attach-documents>
   </p-tabPanel>
   <p-tabPanel header="certificate-requests" leftIcon="pi pi-list">

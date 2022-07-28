@@ -66,3 +66,41 @@
   
 </p-table>
 
+<h2 class="px-1 py-5">Activities</h2>
+
+<p-table [columns]="cols" [value]="products" responsiveLayout="scroll">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{ col.header }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns">
+        {{ rowData[col.field] }}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<h2 class="px-1 py-5">Criterios Generales</h2>
+
+<p-table [columns]="cols1" [value]="products1" responsiveLayout="scroll">
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{ col.header }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns">
+        {{ rowData[col.field] }}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+

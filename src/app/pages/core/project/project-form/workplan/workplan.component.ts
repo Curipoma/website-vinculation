@@ -11,7 +11,8 @@ export class WorkplanComponent implements OnInit {
   situation: string;
   justification: string;
   products: any[];
-
+  products1: any[];
+  cols1: any[];
   cols: any[];
 
   constructor() {
@@ -38,7 +39,20 @@ export class WorkplanComponent implements OnInit {
     //this.products = [{ IndicatorsVerifiable: "hola" }];
     //this.products = [{ MeansofVerification: "hola" }];
     //this.products = [{ Configuration: "hola" }];
+
+      this.cols1 = [
+      { field: 'num', header: 'Num' },
+      { field: 'name', header: 'Name' },
+      { field: 'obj', header: 'Objectives' },
+      { field: 'Configuration', header: 'Configuration' },
+    ];
+    this.products1 = [{ nar: 12 }];
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
   }
 
-  ngOnInit(): void {}
-}
+ 
+
+

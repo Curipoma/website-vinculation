@@ -43,7 +43,7 @@
   <p-tabPanel header="members" leftIcon="pi pi-users">
     <app-members></app-members>
   </p-tabPanel>
-  <p-tabPanel header="activities" leftIcon="pi pi-tags" [selected]="true">
+  <p-tabPanel header="activities" leftIcon="pi pi-tags">
     <app-activities></app-activities>
   </p-tabPanel>
   <p-tabPanel header="workplan" leftIcon="pi pi-th-large">
@@ -58,7 +58,7 @@
   <p-tabPanel header="annexes" leftIcon="pi pi-clone">
     <app-annexes></app-annexes>
   </p-tabPanel>
-  <p-tabPanel header="observations" leftIcon="pi pi-comments">
+  <p-tabPanel header="observations" leftIcon="pi pi-comments" [selected]="true">
     <app-observations></app-observations>
   </p-tabPanel>
   <p-tabPanel header="attach-documents" leftIcon="pi pi-cloud-upload">

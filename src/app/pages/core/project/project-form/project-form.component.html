@@ -34,14 +34,10 @@
 </p-card>
 
 <p-tabView [scrollable]="true">
-  <p-tabPanel
-    header="general-data"
-    leftIcon="pi pi-folder-open"
-    [selected]="true"
-  >
+  <p-tabPanel header="general-data" leftIcon="pi pi-folder-open">
     <app-general-data></app-general-data>
   </p-tabPanel>
-  <p-tabPanel header="business" leftIcon="pi pi-shopping-bag">
+  <p-tabPanel header="business" leftIcon="pi pi-shopping-bag" [selected]="true">
     <app-business></app-business>
   </p-tabPanel>
   <p-tabPanel header="members" leftIcon="pi pi-users">

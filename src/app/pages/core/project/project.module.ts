@@ -7,6 +7,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
+import { FileUploadModule } from 'primeng/fileupload';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { MultiSelectModule } from 'primeng/multiselect';
@@ -58,6 +59,7 @@ import { SharedModule } from '@shared/shared.module';
     ButtonModule,
     CardModule,
     DropdownModule,
+    FileUploadModule,
     InputTextModule,
     InputTextareaModule,
     MultiSelectModule,

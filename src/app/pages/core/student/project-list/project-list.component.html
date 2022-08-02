@@ -1,0 +1,33 @@
+<br><br><br><br><br>
+<p-table [value]="projects" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Nombre de la solicitud</th>
+          <th>Estado</th>
+          <th>Fecha de envío</th>
+          <th>Fecha de aprobación</th>
+          <th>Comentarios</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+      <tr>
+          <td>{{product.name}}</td>
+          <td>{{product.state}}</td>
+          <td>{{product.date}}</td>
+          <td>{{product.date1}}</td>
+          <td>{{product.coment}}</td>
+      </tr>
+    </ng-template> 
+    <ng-template pTemplate="footer">
+      <br><br>
+      <button
+        pButton
+        type="button"
+        class="p-button-primary "
+        (click)="create()"
+        label="Crear Solicitud"
+      ></button>
+    </ng-template>
+  
+</p-table>
+<br><br><br>

@@ -7,51 +7,51 @@ import { CoreService } from '@services/core';
   styleUrls: ['./members.component.scss'],
 })
 export class MembersComponent implements OnInit {
-  coordinadores: any[];
+  estudiantess: any[];
   columns: any[];
   loaded$ = this.coreService.loaded$;
 
   constructor(private coreService: CoreService) {
-    this.coordinadores = [
+    this.estudiantess = [
       {
-        id: 1,
-        nameTitle: 'ing.Pablo Robayo',
-        workingHours: 'según hoario de trabajo',
-        position: 'Representante Legal',
-        assignedDuties: 'Representante Legal',
+        Cedula: 1751515649,
+        Estudiantes: 'Nathy Benavides',
+        Curso: '5 VB',
+        Portafolio: ' VER PORTAFOLIO',
+        Calificaciones: '100',
       },
       {
-        id: 2,
-        nameTitle: 'ing.Pablo Robayo',
-        workingHours: 'según hoario de trabajo',
-        position: 'Representante Legal',
-        assignedDuties: 'Representante Legal',
+        Cedula: 1753070570,
+        Estudiantes: 'Jhonatan Quito',
+        Curso: '5 VB',
+        Portafolio: ' VER PORTAFOLIO',
+        Calificaciones: '100',
       },
       {
-        id: 3,
-        nameTitle: 'ing.Pablo Robayo',
-        workingHours: 'según hoario de trabajo',
-        position: 'Representante Legal',
-        assignedDuties: 'Representante Legal',
+        Cedula: 1727088757,
+        Estudiantes: 'Kevin Motoche',
+        Curso: '5 VB',
+        Portafolio: ' VER PORTAFOLIO',
+        Calificaciones: '100',
       },
     ];
     this.columns = [
-      { field: 'id', header: 'Num' },
-      { field: 'nameTitle', header: 'Nombre y título profesiona' },
-      { field: 'workingHours', header: 'Horario de trabajo para el proyecto' },
+      { field: 'Cedula', header: 'Numero' },
+      { field: 'Estudiantes', header: 'Nombre ' },
+      { field: 'Curso', header: 'Curso del semestre' },
       {
-        field: 'position',
-        header: 'Cargo o función en la institución benefica',
+        field: 'Portafolio',
+        header: 'Portafolio del estudiante',
       },
-      { field: 'assignedDuties', header: 'Funciones asignadas' },
+      { field: 'Calificaciones', header: 'Calificacion' },
     ];
   }
 
   ngOnInit(): void {}
 
   remove(id: number) {
-    this.coordinadores = this.coordinadores.filter(
-      (coordinador) => coordinador.id != id
+    this.estudiantess = this.estudiantess.filter(
+      (estudiantess) => estudiantess.id != id
     );
   }
 }

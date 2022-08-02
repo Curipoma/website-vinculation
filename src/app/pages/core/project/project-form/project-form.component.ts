@@ -9,13 +9,10 @@ import { ProjectModel } from '@models/core';
 export class ProjectFormComponent implements OnInit {
   project: ProjectModel = {
     title:
-      'IMPLEMENTACIÓN DE UN SISTEMA WEB QUE PERMITA DAR A CONOCER LOS SERVICIOS Y PRODUCTOS QUE OFRECE LA FUNDACIÓN ALAS DE COLIBRÍ',
+      'PROYECTO 1',
     code: 'ISTBJ-VC-DS-003-2021',
   };
   constructor() {}
 
   ngOnInit(): void {}
-
-  generatePdf() {}
-  generateConvenio() {}
 }

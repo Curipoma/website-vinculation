@@ -17,7 +17,7 @@ export class ProjectListComponent implements OnInit {
     this.projects = [
       {
         id: 1,
-        name: 'project',
+        name: 'project 1',
         career: { name: 'software development' },
         state: { value: 'pending' },
         requests: { value: 'pending' },
@@ -346,10 +346,7 @@ export class ProjectListComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  edit(id: number) {
+  view(id: number) {
     this.router.navigate(['/core/projects/', id]);
-  }
-  remove(id: number) {
-    this.projects = this.projects.filter((project) => project.id != id);
   }
 }

@@ -3,18 +3,18 @@
     <div class="flex flex-column p-fluid grid col-4">
       <div class="field col-12">
         <span class="p-float-label">
-          <input type="text" id="inputtext" pInputText />
+          <input readonly type="text" id="inputtext" pInputText />
           <label for="inputtext">Nombre de la entidad</label>
         </span>
       </div>
 
-      <div class="field col-12">
+      <div  class="field col-12">
         <p class="pb-2">naturaleza</p>
         <div
           *ngFor="let naturaleza of naturalezas"
           class="field-radiobutton flex gap-2 flex-row"
         >
-          <p-radioButton
+          <p-radioButton [disabled]="true"
             name="naturaleza"
             [value]="naturaleza"
             [(ngModel)]="selectedValue"
@@ -25,8 +25,8 @@
 
       <div class="field col-12">
         <span class="p-float-label">
-          <input type="text" id="inputtext" pInputText />
-          <label for="inputtext">
+          <input readonly type="text" id="inputtext" pInputText />
+          <label  for="inputtext">
             Nombre de la persona autorizada legalmente para la suscripción del
             Convenio
           </label>
@@ -35,15 +35,15 @@
 
       <div class="field col-12">
         <span class="p-float-label">
-          <input type="text" id="inputtext" pInputText />
-          <label for="inputtext">Número de RUC</label>
+          <input readonly type="text" id="inputtext" pInputText />
+          <label  for="inputtext">Número de RUC</label>
         </span>
       </div>
 
       <div class="field col-12">
         <span class="p-float-label">
-          <input type="text" id="inputtext" pInputText />
-          <label for="inputtext">
+          <input readonly type="text" id="inputtext" pInputText />
+          <label  for="inputtext">
             Actividad económica que consta en el RUC
           </label>
         </span>
@@ -51,15 +51,15 @@
 
       <div class="field col-12">
         <span class="p-float-label">
-          <input type="text" id="inputtext" pInputText />
+          <input readonly type="text" id="inputtext" pInputText />
           <label for="inputtext">Correo electrónico de la empresa</label>
         </span>
       </div>
 
       <div class="field col-12">
         <span class="p-float-label">
-          <input type="text" id="inputtext" pInputText />
-          <label for="inputtext">Teléfono de contacto</label>
+          <input readonly type="text" id="inputtext" pInputText />
+          <label  for="inputtext">Teléfono de contacto</label>
         </span>
       </div>
     </div>
@@ -68,7 +68,7 @@
       <p-card header="dirección matriz de entidad receptora">
         <div class="field col-12">
           <span class="p-float-label">
-            <p-dropdown
+            <p-dropdown [disabled]="true"
               [options]="provincias"
               optionLabel="name"
               [filter]="true"
@@ -83,7 +83,7 @@
 
         <div class="field col-12">
           <span class="p-float-label">
-            <p-dropdown
+            <p-dropdown [disabled]="true"
               [options]="provincias"
               optionLabel="name"
               [filter]="true"
@@ -98,7 +98,7 @@
 
         <div class="field col-12">
           <span class="p-float-label">
-            <p-dropdown
+            <p-dropdown [disabled]="true"
               [options]="provincias"
               optionLabel="name"
               [filter]="true"
@@ -113,7 +113,7 @@
 
         <div class="field col-12">
           <span class="p-float-label">
-            <textarea
+            <textarea [disabled]="true"
               [rows]="5"
               [cols]="30"
               pInputTextarea
@@ -127,7 +127,7 @@
       <p-card header="dirección sucursal de entidad receptora">
         <div class="field col-12">
           <span class="p-float-label">
-            <p-dropdown
+            <p-dropdown [disabled]="true"
               [options]="provincias"
               optionLabel="name"
               [filter]="true"
@@ -142,7 +142,7 @@
 
         <div class="field col-12">
           <span class="p-float-label">
-            <p-dropdown
+            <p-dropdown [disabled]="true"
               [options]="provincias"
               optionLabel="name"
               [filter]="true"
@@ -157,7 +157,7 @@
 
         <div class="field col-12">
           <span class="p-float-label">
-            <p-dropdown
+            <p-dropdown [disabled]="true"
               [options]="provincias"
               optionLabel="name"
               [filter]="true"
@@ -172,7 +172,7 @@
 
         <div class="field col-12">
           <span class="p-float-label">
-            <textarea
+            <textarea [disabled]="true"
               [rows]="5"
               [cols]="30"
               pInputTextarea
@@ -186,7 +186,7 @@
     <div class="flex flex-column p-fluid grid col-4">
       <div class="field col-12">
         <span class="p-float-label">
-          <p-inputNumber
+          <p-inputNumber [disabled]="true"
             mode="decimal"
             inputId="withoutgrouping"
             [useGrouping]="false"
@@ -200,7 +200,7 @@
 
       <div class="field col-12">
         <span class="p-float-label">
-          <p-inputNumber
+          <p-inputNumber [disabled]="true"
             mode="decimal"
             inputId="withoutgrouping"
             [useGrouping]="false"
@@ -214,7 +214,7 @@
 
       <div class="field col-12">
         <span class="p-float-label">
-          <textarea
+          <textarea [disabled]="true"
             [rows]="5"
             [cols]="30"
             pInputTextarea
@@ -226,7 +226,7 @@
 
       <div class="field col-12">
         <span class="p-float-label">
-          <textarea
+          <textarea [disabled]="true"
             [rows]="5"
             [cols]="30"
             pInputTextarea
@@ -238,7 +238,7 @@
 
       <div class="field col-12">
         <span class="p-float-label">
-          <textarea
+          <textarea [disabled]="true"
             [rows]="5"
             [cols]="30"
             pInputTextarea

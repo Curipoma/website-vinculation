@@ -1,5 +1,5 @@
 <p-card header="Coordinador del proyecto">
-  <p-table
+  <p-table 
     [value]="coordinadores"
     [columns]="columns"
     responsiveLayout="scroll"
@@ -7,12 +7,12 @@
     <ng-template pTemplate="header">
       <tr>
         <th style="width: 3rem">
-          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+          <p-tableHeaderCheckbox [disabled]="true"></p-tableHeaderCheckbox>
         </th>
         <th *ngFor="let col of columns">
           {{ col.header }}
           <p-sortIcon [field]="col.field"></p-sortIcon>
-          <p-columnFilter
+          <p-columnFilter 
             type="text"
             [field]="col.field"
             display="menu"
@@ -25,7 +25,7 @@
     <ng-template pTemplate="body" let-rowData>
       <tr class="p-selectable-row">
         <td>
-          <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+          <p-tableCheckbox [disabled]="true"></p-tableCheckbox>
         </td>
         <td *ngFor="let col of columns">
           <!--Objects-->
@@ -56,7 +56,7 @@
     <ng-template pTemplate="header">
       <tr>
         <th style="width: 3rem">
-          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+          <p-tableHeaderCheckbox [disabled]="true"></p-tableHeaderCheckbox>
         </th>
         <th *ngFor="let col of columns">
           {{ col.header }}
@@ -74,7 +74,7 @@
     <ng-template pTemplate="body" let-rowData>
       <tr class="p-selectable-row">
         <td>
-          <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+          <p-tableCheckbox [disabled]="true"></p-tableCheckbox>
         </td>
         <td *ngFor="let col of columns">
           <!--Objects-->
@@ -105,7 +105,7 @@
     <ng-template pTemplate="header">
       <tr>
         <th style="width: 3rem">
-          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+          <p-tableHeaderCheckbox [disabled]="true"></p-tableHeaderCheckbox>
         </th>
         <th *ngFor="let col of columns">
           {{ col.header }}
@@ -123,7 +123,7 @@
     <ng-template pTemplate="body" let-rowData>
       <tr class="p-selectable-row">
         <td>
-          <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+          <p-tableCheckbox [disabled]="true"></p-tableCheckbox>
         </td>
         <td *ngFor="let col of columns">
           <!--Objects-->
@@ -154,7 +154,7 @@
     <ng-template pTemplate="header">
       <tr>
         <th style="width: 3rem">
-          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+          <p-tableHeaderCheckbox [disabled]="true"></p-tableHeaderCheckbox>
         </th>
         <th *ngFor="let col of columns">
           {{ col.header }}
@@ -172,7 +172,7 @@
     <ng-template pTemplate="body" let-rowData>
       <tr class="p-selectable-row">
         <td>
-          <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+          <p-tableCheckbox [disabled]="true"></p-tableCheckbox>
         </td>
         <td *ngFor="let col of columns">
           <!--Objects-->
@@ -203,7 +203,7 @@
     <ng-template pTemplate="header">
       <tr>
         <th style="width: 3rem">
-          <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+          <p-tableHeaderCheckbox [disabled]="true"></p-tableHeaderCheckbox>
         </th>
         <th *ngFor="let col of columns">
           {{ col.header }}
@@ -221,7 +221,7 @@
     <ng-template pTemplate="body" let-rowData>
       <tr class="p-selectable-row">
         <td>
-          <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+          <p-tableCheckbox [disabled]="true"></p-tableCheckbox>
         </td>
         <td *ngFor="let col of columns">
           <!--Objects-->

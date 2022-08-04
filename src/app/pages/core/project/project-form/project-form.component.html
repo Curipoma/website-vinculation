@@ -1,7 +1,7 @@
 <p-card>
   <div class="flex justify-content-between">
     <div class="w-auto">
-      <button
+      <button 
         pButton
         type="button"
         class="p-button-primary p-button-rounded mr-2"
@@ -11,7 +11,7 @@
         (click)="generatePdf()"
       ></button>
 
-      <button
+      <button 
         pButton
         type="button"
         class="p-button-success p-button-rounded mr-2"
@@ -34,13 +34,13 @@
 </p-card>
 
 <p-tabView [scrollable]="true">
-  <p-tabPanel
+  <p-tabPanel 
     header="general-data"
     leftIcon="pi pi-folder-open"
     [selected]="true"
   >
     <app-general-data></app-general-data>
-  </p-tabPanel>
+  </p-tabPanel> 
   <p-tabPanel header="business" leftIcon="pi pi-shopping-bag">
     <app-business></app-business>
   </p-tabPanel>

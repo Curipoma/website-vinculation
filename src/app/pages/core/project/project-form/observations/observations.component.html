@@ -4,13 +4,13 @@
     *ngFor="let state of states"
     class="field-radiobutton flex gap-2 flex-row"
   >
-    <p-radioButton
+    <p-radioButton 
       [inputId]="state.key"
       name="state"
       [value]="state"
       [(ngModel)]="selectedState"
     ></p-radioButton>
-    <label [for]="state.key">{{ state.name }}</label>
+    <label readonly [for]="state.key">{{ state.name }}</label>
   </div>
 </div>
 
@@ -21,7 +21,7 @@
   </span>
 </div>
 
-<button
+<button 
   pButton
   type="button"
   class="p-button-success p-button-rounded mr-2"

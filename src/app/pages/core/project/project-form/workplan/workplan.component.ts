@@ -10,6 +10,8 @@ export class WorkplanComponent implements OnInit {
   objective: string;
   situation: string;
   justification: string;
+  conclution: string;
+  recomendation: string;
   products: any[];
   products1: any[];
   cols1: any[];
@@ -27,32 +29,41 @@ export class WorkplanComponent implements OnInit {
     this.justification =
       'La Fundación Alas de colibrí es una organización social sin fines de lucro unidos con un solo fin, ayudar a los demás, y dedicada a impulsar y promover programas especializados para la restitución de los derechos vulnerados de las personas, con énfasis en la problemática de trata de seres humanos, programas de atención psicológica, capacitación y servicio social. Entendiendo la situación actual de la Fundación y la gran necesidad existente, se pide el apoyo de los estudiantes de la carrera de Desarrollo de Software, para la implementación de un sistema web que brinde la oportunidad de acceder a los servicios y productos que ofrece la misma, a personas quiénes sufren violencia basada en género y movilidad humana.';
 
+    this.conclution =
+      'Con los datos mostrados con anterioridad se puede llegar a la conclusión de que el proyecto de vinculación con la sociedad “Implementación y seguimiento de un sistema web que permita dar a conocer los servicios y productos que ofrece la Iglesia “Ejercito de Salvación Quito Sur “ propuesto por el Instituto Superior Benito Juárez, referente a la realización de estrategias de marketing para el desarrollo de la fundación es viable';
+
+    this.recomendation =
+      'Con los datos expuestos anteriormente sobre el proyecto “Implementación de una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios que proporciona la iglesia a la comunidad ecuatoriana” se recomienda la suscripción del convenio de vinculación con la sociedad entre el Instituto Superior Tecnológico Benito Juárez y la Fundación Alas de colibrí.';
+
     this.cols = [
       { field: 'num', header: 'Num' },
-      { field: 'narrativesummary', header: 'Narrative Summary' },
+      { field: 'name_narrative', header: 'Narrative Summary' },
       { field: 'IndicatorsVerifiable', header: 'Indicators-Verifiable' },
-      { field: 'Means of Verification', header: 'Means of Verification' },
-      { field: 'Configuration', header: 'Configuration' },
+      { field: 'MeansofVerification', header: 'Means of Verification' },
     ];
-    this.products = [{ num: 12 }];
-    //this.products = [{ narrativesummary: 'Resumen Narratuv' }];
-    //this.products = [{ IndicatorsVerifiable: "hola" }];
-    //this.products = [{ MeansofVerification: "hola" }];
-    //this.products = [{ Configuration: "hola" }];
+    this.products = [
+      {
+        num: 12,
+        name_narrative: 'Resumen Narratuv',
+        IndicatorsVerifiable: 'hola',
+        MeansofVerification: 'hola',
+      },
+    ];
 
-      this.cols1 = [
+    this.cols1 = [
       { field: 'num', header: 'Num' },
       { field: 'name', header: 'Name' },
       { field: 'obj', header: 'Objectives' },
-      { field: 'Configuration', header: 'Configuration' },
     ];
-    this.products1 = [{ nar: 12 }];
+    this.products1 = [
+      {
+        num: 12,
+        name: 'Un Nombre',
+        obj: 'Un Objetivo ',
+      },
+    ];
   }
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
-  }
-
- 
-
-
+}

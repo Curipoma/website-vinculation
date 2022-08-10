@@ -30,6 +30,16 @@ export class BibliographiesComponent implements OnInit {
         estrategys:
           'Informes de seguimiento y cumplimiento mensuales en los cuales se especificará el cumplimiento de los requerimientos.',
       },
+      {
+        num: 3,
+        estrategys:
+          'Informes de seguimiento y cumplimiento mensuales en los cuales se especificará el cumplimiento de los requerimientos.',
+      },
+      {
+        num: 4,
+        estrategys:
+          'Informes de seguimiento y cumplimiento mensuales en los cuales se especificará el cumplimiento de los requerimientos.',
+      },
     ];
 
     this.cols4 = [
@@ -44,6 +54,16 @@ export class BibliographiesComponent implements OnInit {
       },
       {
         num: 2,
+        bibliografys:
+          'ROGER PRESMAN, Ingeniería de Software enfoque práctico, Mc Graw Hill,2010',
+      },
+      {
+        num: 3,
+        bibliografys:
+          'ROGER PRESMAN, Ingeniería de Software enfoque práctico, Mc Graw Hill,2010',
+      },
+      {
+        num: 4,
         bibliografys:
           'ROGER PRESMAN, Ingeniería de Software enfoque práctico, Mc Graw Hill,2010',
       },

@@ -37,16 +37,53 @@ export class WorkplanComponent implements OnInit {
 
     this.cols = [
       { field: 'num', header: 'Num' },
-      { field: 'name_narrative', header: 'Narrative Summary' },
-      { field: 'IndicatorsVerifiable', header: 'Indicators-Verifiable' },
-      { field: 'MeansofVerification', header: 'Means of Verification' },
+      { field: 'name', header: 'Nombre' },
+      { field: 'name_obj', header: 'Objetivos' },
+      { field: 'IndicatorsVerifiable', header: 'Indicador-Verificable' },
+      { field: 'MeansofVerification', header: 'Medios de Verificacion' },
     ];
     this.products = [
       {
-        num: 12,
-        name_narrative: 'Resumen Narratuv',
-        IndicatorsVerifiable: 'hola',
-        MeansofVerification: 'hola',
+        num: 1,
+        name: 'Ley Organica de  ley Superior',
+        name_obj:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios que proporciona ',
+        IndicatorsVerifiable:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios que proporciona la iglesia a la comunidad ecuatoriana.',
+        MeansofVerification:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios ',
+      },
+
+      {
+        num: 2,
+        name: 'Ley Organica de  ley Superior',
+        name_obj:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios que proporciona ',
+        IndicatorsVerifiable:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios que proporciona la iglesia a la comunidad ecuatoriana.',
+        MeansofVerification:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios ',
+      },
+      {
+        num: 3,
+        name: 'Ley Organica de  ley Superior',
+        name_obj:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios que proporciona ',
+        IndicatorsVerifiable:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios que proporciona la iglesia a la comunidad ecuatoriana.',
+        MeansofVerification:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios ',
+      },
+
+      {
+        num: 4,
+        name: 'Ley Organica de  ley Superior',
+        name_obj:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios que proporciona ',
+        IndicatorsVerifiable:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios que proporciona la iglesia a la comunidad ecuatoriana.',
+        MeansofVerification:
+          'Diseñar una plataforma web con información de la iglesia Ejército de Salvación Cuerpo Quito Sur para poder publicar a esta, dentro del entorno digital y de esta manera poder informar a la sociedad en general sobre la existencia y servicios ',
       },
     ];
 
@@ -57,9 +94,24 @@ export class WorkplanComponent implements OnInit {
     ];
     this.products1 = [
       {
-        num: 12,
-        name: 'Un Nombre',
-        obj: 'Un Objetivo ',
+        num: 1,
+        name: 'Documento de creación del IST',
+        obj: 'La iglesia Ejército de Salvación Cuerpo Quito Sur es una organización sin fines de lucro, trabaja en el sector sur de Quito, actualmente la iglesia se encuentra en situación de riesgo debido a que podría perder el fondo de Caridad Social que recibe para sus proyectos que contribuyen al bienestar integral de la sociedad a través de las actividades religiosas , cuenta con 165 miembros entre niños y jóvenes de escasos recursos y en situación de vulnerabilidad dentro y fuera del hogar, los cuales reciben desayuno, almuerzo y un refrigerio por la tarde, además de apoyo económico para la compra de medicinas y citas médicas, realizan actividades de profesionales o tutores enviados por los programas de apadrinamiento. También cuenta con 34 adultos mayores de 60 años en situación de vulnerabilidad, abandono o sin hogar a los cuales se les brinda el desayuno, almuerzo, y un refrigerio además de un apoyo para las citas médicas y medicinas, en este caso las actividades las realiza el tutor enviado por el Municipio de la ciudad de Quito.',
+      },
+      {
+        num: 2,
+        name: 'Documento de creación del IST',
+        obj: 'La iglesia Ejército de Salvación Cuerpo Quito Sur es una organización sin fines de lucro, trabaja en el sector sur de Quito, actualmente la iglesia se encuentra en situación de riesgo debido a que podría perder el fondo de Caridad Social que recibe para sus proyectos que contribuyen al bienestar integral de la sociedad a través de las actividades religiosas , cuenta con 165 miembros entre niños y jóvenes de escasos recursos y en situación de vulnerabilidad dentro y fuera del hogar, los cuales reciben desayuno, almuerzo y un refrigerio por la tarde, además de apoyo económico para la compra de medicinas y citas médicas, realizan actividades de profesionales o tutores enviados por los programas de apadrinamiento. También cuenta con 34 adultos mayores de 60 años en situación de vulnerabilidad, abandono o sin hogar a los cuales se les brinda el desayuno, almuerzo, y un refrigerio además de un apoyo para las citas médicas y medicinas, en este caso las actividades las realiza el tutor enviado por el Municipio de la ciudad de Quito.',
+      },
+      {
+        num: 3,
+        name: 'Documento de creación del IST',
+        obj: 'La iglesia Ejército de Salvación Cuerpo Quito Sur es una organización sin fines de lucro, trabaja en el sector sur de Quito, actualmente la iglesia se encuentra en situación de riesgo debido a que podría perder el fondo de Caridad Social que recibe para sus proyectos que contribuyen al bienestar integral de la sociedad a través de las actividades religiosas , cuenta con 165 miembros entre niños y jóvenes de escasos recursos y en situación de vulnerabilidad dentro y fuera del hogar, los cuales reciben desayuno, almuerzo y un refrigerio por la tarde, además de apoyo económico para la compra de medicinas y citas médicas, realizan actividades de profesionales o tutores enviados por los programas de apadrinamiento. También cuenta con 34 adultos mayores de 60 años en situación de vulnerabilidad, abandono o sin hogar a los cuales se les brinda el desayuno, almuerzo, y un refrigerio además de un apoyo para las citas médicas y medicinas, en este caso las actividades las realiza el tutor enviado por el Municipio de la ciudad de Quito.',
+      },
+      {
+        num: 4,
+        name: 'Documento de creación del IST',
+        obj: 'La iglesia Ejército de Salvación Cuerpo Quito Sur es una organización sin fines de lucro, trabaja en el sector sur de Quito, actualmente la iglesia se encuentra en situación de riesgo debido a que podría perder el fondo de Caridad Social que recibe para sus proyectos que contribuyen al bienestar integral de la sociedad a través de las actividades religiosas , cuenta con 165 miembros entre niños y jóvenes de escasos recursos y en situación de vulnerabilidad dentro y fuera del hogar, los cuales reciben desayuno, almuerzo y un refrigerio por la tarde, además de apoyo económico para la compra de medicinas y citas médicas, realizan actividades de profesionales o tutores enviados por los programas de apadrinamiento. También cuenta con 34 adultos mayores de 60 años en situación de vulnerabilidad, abandono o sin hogar a los cuales se les brinda el desayuno, almuerzo, y un refrigerio además de un apoyo para las citas médicas y medicinas, en este caso las actividades las realiza el tutor enviado por el Municipio de la ciudad de Quito.',
       },
     ];
   }

@@ -1,5 +1,11 @@
 <p-card header="Estrategia de Seguimiento y Evaluación">
-  <p-table [columns]="cols3" [value]="products3" responsiveLayout="scroll">
+  <p-table
+    [columns]="cols3"
+    [value]="products3"
+    responsiveLayout="scroll"
+    [rows]="3"
+    [paginator]="true"
+  >
     <ng-template pTemplate="header" let-columns style="width: 45px">
       <tr>
         <th *ngFor="let col of columns">
@@ -18,7 +24,13 @@
 </p-card>
 
 <p-card header="Bivliografias">
-  <p-table [columns]="cols4" [value]="products4" responsiveLayout="scroll">
+  <p-table
+    [columns]="cols4"
+    [value]="products4"
+    responsiveLayout="scroll"
+    [rows]="3"
+    [paginator]="true"
+  >
     <ng-template pTemplate="header" let-columns style="width: 45px">
       <tr>
         <th *ngFor="let col of columns">
@@ -35,4 +47,3 @@
     </ng-template>
   </p-table>
 </p-card>
-

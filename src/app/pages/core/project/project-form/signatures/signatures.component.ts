@@ -30,6 +30,20 @@ export class SignaturesComponent implements OnInit {
         nombre: 'Ing Maritza Tituaña -Master en Datos',
         ci: '1719797896',
       },
+
+      {
+        num: 3,
+        carge: 'Puesto de Carga Ejemplo3',
+        nombre: 'Ing Yogledis Herrera -Master en Analitica',
+        ci: '1719797896',
+      },
+
+      {
+        num: 4,
+        carge: 'Puesto de Carga Ejemplo4',
+        nombre: 'Ing Diego Yanez -Master en Hack Cibernetico',
+        ci: '1719797896',
+      },
     ];
 
     //this.products2 = [{ name: 'Resumen Narratuv' }];

@@ -28,21 +28,21 @@ export class SignaturesComponent implements OnInit {
         num: 2,
         carge: 'Puesto de Carga Ejemplo2',
         nombre: 'Ing Maritza Tituaña -Master en Datos',
-        ci: '1719797896',
+        ci: '1745367891',
       },
 
       {
         num: 3,
         carge: 'Puesto de Carga Ejemplo3',
         nombre: 'Ing Yogledis Herrera -Master en Analitica',
-        ci: '1719797896',
+        ci: '1236985320',
       },
 
       {
         num: 4,
         carge: 'Puesto de Carga Ejemplo4',
         nombre: 'Ing Diego Yanez -Master en Hack Cibernetico',
-        ci: '1719797896',
+        ci: '1489632014',
       },
     ];
 

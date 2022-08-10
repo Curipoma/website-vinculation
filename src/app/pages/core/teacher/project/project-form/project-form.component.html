@@ -1,0 +1,41 @@
+
+
+<p-tabView [scrollable]="true">
+  <p-tabPanel 
+    header="general-data"
+    leftIcon="pi pi-folder-open"
+    [selected]="true"
+  >
+    <app-general-data></app-general-data>
+  </p-tabPanel> 
+  <p-tabPanel header="business" leftIcon="pi pi-shopping-bag">
+    <app-business></app-business>
+  </p-tabPanel>
+  <p-tabPanel header="members" leftIcon="pi pi-users">
+    <app-members></app-members>
+  </p-tabPanel>
+  <p-tabPanel header="activities" leftIcon="pi pi-tags">
+    <app-activities></app-activities>
+  </p-tabPanel>
+  <p-tabPanel header="workplan" leftIcon="pi pi-th-large">
+    <app-workplan></app-workplan>
+  </p-tabPanel>
+  <p-tabPanel header="signatures" leftIcon="pi pi-file">
+    <app-signatures></app-signatures>
+  </p-tabPanel>
+  <p-tabPanel header="bibliographies" leftIcon="pi pi-database">
+    <app-bibliographies></app-bibliographies>
+  </p-tabPanel>
+  <p-tabPanel header="annexes" leftIcon="pi pi-clone">
+    <app-annexes></app-annexes>
+  </p-tabPanel>
+  <p-tabPanel header="observations" leftIcon="pi pi-comments">
+    <app-observations></app-observations>
+  </p-tabPanel>
+  <p-tabPanel header="attach-documents" leftIcon="pi pi-cloud-upload">
+    <app-attach-documents></app-attach-documents>
+  </p-tabPanel>
+  <p-tabPanel header="certificate-requests" leftIcon="pi pi-list">
+    <app-certificate-requests></app-certificate-requests>
+  </p-tabPanel>
+</p-tabView>

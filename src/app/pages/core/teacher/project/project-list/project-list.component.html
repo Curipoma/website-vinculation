@@ -1,0 +1,73 @@
+<p-card header="Projects">
+  <div class="flex flex-row">
+    <p-card header="career">
+      <p-dropdown
+        [options]="careers"
+        optionLabel="name"
+        [filter]="true"
+        filterBy="name"
+        [showClear]="true"
+        placeholder="Select career"
+      >
+      </p-dropdown>
+    </p-card>
+    <p-card header="project">
+      <span class="p-input-icon-left">
+        <i class="pi pi-search"></i>
+        <input type="text" pInputText placeholder="Search" />
+      </span>
+    </p-card>
+    <p-card header="state">
+      <p-dropdown
+        [options]="states"
+        optionLabel="name"
+        [filter]="true"
+        filterBy="name"
+        [showClear]="true"
+        placeholder="Select state"
+      >
+      </p-dropdown>
+    </p-card>
+  </div>
+  <ul class="grid">
+    <li *ngFor="let project of projects" class="col-2">
+      <p-card [header]="project.name" styleClass="p-card-shadow">
+        <ng-template pTemplate="header">
+          <img alt="Card" src="https://source.unsplash.com/collection/881002" />
+        </ng-template>
+        <div class="flex flex-column">
+          <span>{{ project.career.name }}</span>
+          <div class="flex gap-2 flex-row">
+            <span>estate</span>
+            <span class="px-2 py-5rem bg-yellow-500 text-gray-900">{{
+              project.state.value
+            }}</span>
+          </div>
+          <div class="flex gap-2 flex-row">
+            <span>requests state</span>
+            <span class="px-2 py-5rem bg-yellow-500 text-gray-900">
+              {{ project.requests.value }}
+            </span>
+          </div>
+        </div>
+        <ng-template pTemplate="footer">
+          <button
+            pButton
+            type="button"
+            class="p-button-primary p-button-rounded mr-2"
+            icon="pi pi-pencil"
+            (click)="edit(project.id)"
+          ></button>
+          <button
+            pButton
+            type="button"
+            class="p-button-danger p-button-rounded mr-2"
+            icon="pi pi-trash"
+            (click)="remove(project.id)"
+          ></button>
+        </ng-template>
+      </p-card>
+    </li>
+  </ul>
+  <p-paginator [rows]="10" [totalRecords]="100"></p-paginator>
+</p-card>

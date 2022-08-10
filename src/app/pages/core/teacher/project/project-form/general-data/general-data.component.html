@@ -1,0 +1,146 @@
+<div class="p-fluid grid">
+  <div class="field col-6">
+    <span class="p-float-label">
+      <input readonly type="text" id="inputtext" pInputText />
+      <label for="inputtext">Código del proyecto</label>
+    </span>
+  </div>
+
+  <div class="field col-12">
+    <span class="p-float-label">
+      <input readonly type="text" id="inputtext" pInputText />
+      <label for="inputtext">Nombre del proyecto</label>
+    </span>
+  </div>
+
+  <div class="field col-6">
+    <span class="p-float-label">
+      <input readonly type="text" id="inputtext" pInputText />
+      <label for="inputtext">Nombre de la institución</label>
+    </span>
+  </div>
+
+  <div class="field col-6">
+    <span class="p-float-label">
+      <input readonly type="text" id="inputtext" pInputText />
+      <label for="inputtext">Ciclo</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <p-calendar [disabled]="true"
+        id="birthdate"
+        dateFormat="yy-mm-dd"
+        [showIcon]="true"
+        [readonlyInput]="true"
+      ></p-calendar>
+      <label for="inputtext">Fecha</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <input readonly type="text" id="inputtext" pInputText />
+      <label  for="inputtext">Plazo de ejecución</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <p class="pb-2">Modalidad</p>
+    <div
+      *ngFor="let modalidad of modalidades"
+      class="field-radiobutton flex gap-2 flex-row"
+    >
+      <p-radioButton [disabled]="true"
+        [inputId]="modalidad.key"
+        name="modalidad"
+        [value]="modalidad"
+        [(ngModel)]="selectedValue"
+      ></p-radioButton>
+      <label [for]="modalidad.key">{{ modalidad.name }}</label>
+    </div>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <p-inputNumber [disabled]="true"
+        inputId="locale-us"
+        mode="decimal"
+        locale="en-US"
+        [minFractionDigits]="2"
+      ></p-inputNumber>
+      <label for="inputtext">Financiamiento</label>
+    </span>
+  </div>
+
+  <div class="field col-12">
+    <span class="p-float-label">
+      <p-dropdown [disabled]="true"
+        [options]="careers"
+        optionLabel="name"
+        [filter]="true"
+        filterBy="name"
+        [showClear]="true"
+        placeholder="Select career"
+      >
+      </p-dropdown>
+      <label for="inputtext">Carrera</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <p-calendar [disabled]="true"
+        id="birthdate"
+        dateFormat="yy-mm-dd"
+        [showIcon]="true"
+        [readonlyInput]="true"
+      ></p-calendar>
+      <label for="inputtext">Plazo de vigencia del convenio</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <p-calendar [disabled]="true"
+        id="birthdate"
+        dateFormat="yy-mm-dd"
+        [showIcon]="true"
+        [readonlyInput]="true"
+      ></p-calendar>
+      <label for="inputtext">Fecha de presentación</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <p-calendar [disabled]="true"
+        id="birthdate"
+        dateFormat="yy-mm-dd"
+        [showIcon]="true"
+        [readonlyInput]="true"
+      ></p-calendar>
+      <label for="inputtext">Fecha de inicio</label>
+    </span>
+  </div>
+
+  <div class="field col-3">
+    <span class="p-float-label">
+      <p-calendar [disabled]="true"
+        id="birthdate"
+        dateFormat="yy-mm-dd"
+        [showIcon]="true"
+        [readonlyInput]="true"
+      ></p-calendar>
+      <label for="inputtext">Fecha de finalización</label>
+    </span>
+  </div>
+
+  <div class="field col-12">
+    <span class="p-float-label">
+      <textarea readonly [rows]="5" [cols]="30" pInputTextarea class="col-6"></textarea>
+      <label  for="inputtext">Cobertura y localización</label>
+    </span>
+  </div>
+</div>

@@ -1,46 +1,9 @@
-<p-card>
-  <div class="flex justify-content-between">
-    Hola Mundo Header
-  </div>
-</p-card>
-
-<p-tabView [scrollable]="true">
-  <p-tabPanel 
-    header="general-data"
-    leftIcon="pi pi-folder-open"
-    [selected]="true"
-  >
-    
-  </p-tabPanel> 
-  <p-tabPanel header="business" leftIcon="pi pi-shopping-bag">
-    
-  </p-tabPanel>
-  <p-tabPanel header="members" leftIcon="pi pi-users">
-    
-  </p-tabPanel>
-  <p-tabPanel header="activities" leftIcon="pi pi-tags">
-    
-  </p-tabPanel>
-  <p-tabPanel header="workplan" leftIcon="pi pi-th-large">
-    
-  </p-tabPanel>
-  <p-tabPanel header="signatures" leftIcon="pi pi-file">
-  
-  </p-tabPanel>
-  <p-tabPanel header="bibliographies" leftIcon="pi pi-database">
-    
-  </p-tabPanel>
-  <p-tabPanel header="annexes" leftIcon="pi pi-clone">
-    
-  </p-tabPanel>
-  <p-tabPanel header="observations" leftIcon="pi pi-comments">
-   
-  </p-tabPanel>
-  <p-tabPanel header="attach-documents" leftIcon="pi pi-cloud-upload">
-    
-  </p-tabPanel>
-  <p-tabPanel header="certificate-requests" leftIcon="pi pi-list">
-    
-  </p-tabPanel>
-</p-tabView>
-
+<button 
+        pButton
+        type="button"
+        class="p-button-primary p-button-rounded mr-2"
+        icon="pi pi-file"
+        pTooltip="Generate Pdf"
+        label="Generate Pdf"
+      ></button>
+      <router-outlet></router-outlet>

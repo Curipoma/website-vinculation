@@ -1,0 +1,106 @@
+<p-table [value]="requests" [columns]="columns" responsiveLayout="scroll">
+  <ng-template pTemplate="header">
+    <tr>
+      <th style="width: 3rem">
+        <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+      </th>
+      <th *ngFor="let col of columns">
+        {{ col.header }}
+        <p-sortIcon [field]="col.field"></p-sortIcon>
+        <p-columnFilter
+          type="text"
+          [field]="col.field"
+          display="menu"
+          class="ml-auto"
+        ></p-columnFilter>
+      </th>
+    </tr>
+  </ng-template>
+
+  <ng-template pTemplate="body" let-rowData>
+    <tr class="p-selectable-row">
+      <td>
+        <p-tableCheckbox [value]="rowData"></p-tableCheckbox>
+      </td>
+      <td *ngFor="let col of columns">
+        <!--Objects-->
+        <div *ngIf="rowData[col.field]?.id" [ngSwitch]="col.field">
+          <div *ngSwitchCase="'state'">
+            {{ rowData[col.field].name }}
+          </div>
+        </div>
+        <!--Fields-->
+        <div *ngIf="!rowData[col.field]?.id" [ngSwitch]="col.field">
+          <div *ngSwitchCase="'updatedAt'">
+            {{ rowData[col.field] | date }}
+          </div>
+          <div *ngSwitchDefault>{{ rowData[col.field] }}</div>
+        </div>
+      </td>
+      <td class="text-center">
+        <button
+          pButton
+          type="button"
+          class="p-button-warning p-button-rounded mr-2"
+          icon="pi pi-download"
+        ></button>
+        <button
+          pButton
+          type="button"
+          class="p-button-warning p-button-rounded mr-2"
+          label="observaciones"
+          pTooltip="observaciones"
+          (click)="showModalDialog()"
+        ></button>
+        <button
+          pButton
+          type="button"
+          class="p-button-warning p-button-rounded mr-2"
+          label="ver portafolio"
+          pTooltip="ver portafolio"
+        ></button>
+        <p-dropdown
+          [options]="states"
+          optionLabel="name"
+          [filter]="true"
+          filterBy="name"
+          [showClear]="true"
+          placeholder="Select state"
+        >
+        </p-dropdown>
+        <button
+          pButton
+          type="button"
+          class="p-button-danger p-button-rounded"
+          icon="pi pi-trash"
+          pTooltip="Delete User"
+        ></button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
+<p-dialog
+  header="Observations"
+  [(visible)]="displayModal"
+  [modal]="true"
+  [style]="{ width: '50vw' }"
+  [draggable]="false"
+  [resizable]="false"
+>
+  <p-divider></p-divider>
+  <div class="col-12">
+    <span class="p-float-label">
+      <textarea [rows]="5" [cols]="30" pInputTextarea class="col-12"></textarea>
+      <label for="inputtext">Observaciones</label>
+    </span>
+  </div>
+  <ng-template pTemplate="footer">
+    <p-button
+      icon="pi pi-check"
+      (click)="displayModal = false"
+      label="Ok"
+      styleClass="p-button-text"
+    ></p-button>
+  </ng-template>
+</p-dialog>

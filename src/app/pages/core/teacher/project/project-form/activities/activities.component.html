@@ -1,0 +1,378 @@
+<p-card>
+  <div class="flex flex-row">
+    <div class="flex flex-column p-fluid grid col-4">
+      <p-card header="Frecuencia de las actividades">
+        <div class="field col-3">
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Diaria"
+              value="Diaria"
+              [(ngModel)]="selectedFrecuenciaActividades"
+            ></p-radioButton>
+            <label for="Diaria">Diaria</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Semanal"
+              value="Semanal"
+              [(ngModel)]="selectedFrecuenciaActividades"
+            ></p-radioButton>
+            <label for="Semanal">Semanal</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Quincenal"
+              value="Quincenal"
+              [(ngModel)]="selectedFrecuenciaActividades"
+            ></p-radioButton>
+            <label for="Quincenal">Quincenal</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Mensual"
+              value="Mensual"
+              [(ngModel)]="selectedFrecuenciaActividades"
+            ></p-radioButton>
+            <label for="Mensual">Mensual</label>
+          </div>
+        </div>
+      </p-card>
+
+      <p-card header="Actividad de vinculación">
+        <div class="field col-3">
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Convenio"
+              value="Convenio"
+              [(ngModel)]="selectedActividadVinculacion"
+            ></p-radioButton>
+            <label for="Convenio">Convenio Institucionales</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Acuerdo"
+              value="Acuerdo"
+              [(ngModel)]="selectedActividadVinculacion"
+            ></p-radioButton>
+            <label for="Acuerdo">Acuerdo</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="ProyectoVinculación"
+              value="ProyectoVinculación"
+              [(ngModel)]="selectedActividadVinculacion"
+            ></p-radioButton>
+            <label for="ProyectoVinculación">
+              Proyecto de vinculación propio IST JME
+            </label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="ProgramaCapacitación"
+              value="ProgramaCapacitación"
+              [(ngModel)]="selectedActividadVinculacion"
+            ></p-radioButton>
+            <label for="ProgramaCapacitación">
+              Programa de capacitación a la comunidad
+            </label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="PracticasVinculación"
+              value="PracticasVinculación"
+              [(ngModel)]="selectedActividadVinculacion"
+            ></p-radioButton>
+            <label for="PracticasVinculación">
+              Practicas Vinculación con la comunidad
+            </label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Investigación"
+              value="Investigación"
+              [(ngModel)]="selectedActividadVinculacion"
+            ></p-radioButton>
+            <label for="Investigación">Investigación</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="otros"
+              value="otros"
+              [(ngModel)]="selectedActividadVinculacion"
+            ></p-radioButton>
+            <label for="otros">otros</label>
+          </div>
+        </div>
+      </p-card>
+    </div>
+    <div class="flex flex-column p-fluid grid col-4">
+      <p-card header="Frecuencia de las actividades">
+        <div class="field col-3">
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Educación"
+              value="Educación"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="Educación">Educación</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Salud"
+              value="Salud"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="Salud">Salud</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="SaneamientoAmbiental"
+              value="SaneamientoAmbiental"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="SaneamientoAmbiental">Saneamiento Ambiental</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="ApoyoProductivo"
+              value="ApoyoProductivo"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="ApoyoProductivo">Apoyo Productivo</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="AgriculturaGanaderíaPesca"
+              value="AgriculturaGanaderíaPesca"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="AgriculturaGanaderíaPesca">
+              Agricultura, Ganadería y Pesca
+            </label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Vivienda"
+              value="Vivienda"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="Vivienda">Vivienda</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="ProtecciónMedioAmbienteDesastresNaturales"
+              value="ProtecciónMedioAmbienteDesastresNaturales"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="ProtecciónMedioAmbienteDesastresNaturales"
+              >Protección del medio ambiente y desastres naturales</label
+            >
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="RecursosNaturalesEnergía"
+              value="RecursosNaturalesEnergía"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="RecursosNaturalesEnergía"
+              >Recursos naturales y energía</label
+            >
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="TransporteComunicaciónViabilidad"
+              value="TransporteComunicaciónViabilidad"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="TransporteComunicaciónViabilidad"
+              >Transporte, comunicación y viabilidad</label
+            >
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="DesarrolloUrbano"
+              value="DesarrolloUrbano"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="DesarrolloUrbano">Desarrollo Urbano</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Turismo"
+              value="Turismo"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="Turismo">Turismo</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Cultura"
+              value="Cultura"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="Cultura">Cultura</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="DesarrolloInvestigaciónCientífica"
+              value="DesarrolloInvestigaciónCientífica"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="DesarrolloInvestigaciónCientífica"
+              >Desarrollo de investigación científica</label
+            >
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="Deportes"
+              value="Deportes"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="Deportes">Deportes</label>
+          </div>
+
+          <div class="field-radiobutton flex gap-2 flex-row">
+            <p-radioButton [disabled]="true"
+              name="JusticiaSeguridad"
+              value="JusticiaSeguridad"
+              [(ngModel)]="selectedSectoresIntervencion"
+            ></p-radioButton>
+            <label for="JusticiaSeguridad">Justicia y Seguridad</label>
+          </div>
+        </div>
+      </p-card>
+    </div>
+    <div class="flex flex-column p-fluid grid col-4">
+      <p-card header="Ejes estratégicos de vinculación con la colectividad">
+        <div class="field-radiobutton flex gap-2 flex-row">
+          <p-radioButton [disabled]="true"
+            name="Ambiente"
+            value="Ambiente"
+            [(ngModel)]="selectedEjesVinculacion"
+          ></p-radioButton>
+          <label for="Ambiente">Ambiente</label>
+        </div>
+
+        <div class="field-radiobutton flex gap-2 flex-row">
+          <p-radioButton [disabled]="true"
+            name="InterculturalidadGénero"
+            value="InterculturalidadGénero"
+            [(ngModel)]="selectedEjesVinculacion"
+          ></p-radioButton>
+          <label for="InterculturalidadGénero">Interculturalidad/género</label>
+        </div>
+
+        <div class="field-radiobutton flex gap-2 flex-row">
+          <p-radioButton [disabled]="true"
+            name="InvestigativoAcadémico"
+            value="InvestigativoAcadémico"
+            [(ngModel)]="selectedEjesVinculacion"
+          ></p-radioButton>
+          <label for="InvestigativoAcadémico">Investigativo Académico</label>
+        </div>
+
+        <div class="field-radiobutton flex gap-2 flex-row">
+          <p-radioButton [disabled]="true"
+            name="DesarrolloSocialComunitario"
+            value="DesarrolloSocialComunitario"
+            [(ngModel)]="selectedEjesVinculacion"
+          ></p-radioButton>
+          <label for="DesarrolloSocialComunitario">
+            Desarrollo social, comunitario
+          </label>
+        </div>
+
+        <div class="field-radiobutton flex gap-2 flex-row">
+          <p-radioButton [disabled]="true"
+            name="DesarrolloLocal"
+            value="DesarrolloLocal"
+            [(ngModel)]="selectedEjesVinculacion"
+          ></p-radioButton>
+          <label for="DesarrolloLocal">Desarrollo local</label>
+        </div>
+
+        <div class="field-radiobutton flex gap-2 flex-row">
+          <p-radioButton [disabled]="true"
+            name="EconomíaPopularSolidaria"
+            value="EconomíaPopularSolidaria"
+            [(ngModel)]="selectedEjesVinculacion"
+          ></p-radioButton>
+          <label for="EconomíaPopularSolidaria">
+            Economía popular y solidaria
+          </label>
+        </div>
+
+        <div class="field-radiobutton flex gap-2 flex-row">
+          <p-radioButton [disabled]="true"
+            name="DesarrolloTécnicoTecnológico"
+            value="DesarrolloTécnicoTecnológico"
+            [(ngModel)]="selectedEjesVinculacion"
+          ></p-radioButton>
+          <label for="DesarrolloTécnicoTecnológico">
+            Desarrollo técnico y tecnológico
+          </label>
+        </div>
+
+        <div class="field-radiobutton flex gap-2 flex-row">
+          <p-radioButton [disabled]="true"
+            name="Innovación"
+            value="Innovación"
+            [(ngModel)]="selectedEjesVinculacion"
+          ></p-radioButton>
+          <label for="Innovación">Innovación</label>
+        </div>
+
+        <div class="field-radiobutton flex gap-2 flex-row">
+          <p-radioButton [disabled]="true"
+            name="ResponsabilidadSocialUniversitaria"
+            value="ResponsabilidadSocialUniversitaria"
+            [(ngModel)]="selectedEjesVinculacion"
+          ></p-radioButton>
+          <label for="ResponsabilidadSocialUniversitaria"
+            >Responsabilidad social universitaria</label
+          >
+        </div>
+
+        <div class="field-radiobutton flex gap-2 flex-row">
+          <p-radioButton [disabled]="true"
+            name="MatrizProductiva"
+            value="MatrizProductiva"
+            [(ngModel)]="selectedEjesVinculacion"
+          ></p-radioButton>
+          <label for="MatrizProductiva">Matriz productiva</label>
+        </div>
+
+        <div class="field-radiobutton flex gap-2 flex-row">
+          <p-radioButton [disabled]="true"
+            name="otros"
+            value="otros"
+            [(ngModel)]="selectedEjesVinculacion"
+          ></p-radioButton>
+          <label for="otros">otros</label>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</p-card>

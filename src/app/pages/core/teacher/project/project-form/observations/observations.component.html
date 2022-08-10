@@ -1,0 +1,30 @@
+<div class="field col-3">
+  <p class="pb-2">Estado</p>
+  <div
+    *ngFor="let state of states"
+    class="field-radiobutton flex gap-2 flex-row"
+  >
+    <p-radioButton 
+      [inputId]="state.key"
+      name="state"
+      [value]="state"
+      [(ngModel)]="selectedState"
+    ></p-radioButton>
+    <label readonly [for]="state.key">{{ state.name }}</label>
+  </div>
+</div>
+
+<div class="field col-12">
+  <span class="p-float-label">
+    <textarea [rows]="5" [cols]="30" pInputTextarea class="col-12"></textarea>
+    <label for="inputtext">Observaciones</label>
+  </span>
+</div>
+
+<button 
+  pButton
+  type="button"
+  class="p-button-success p-button-rounded mr-2"
+  pTooltip="Generate Pdf"
+  label="Enviar Observaciones"
+></button>

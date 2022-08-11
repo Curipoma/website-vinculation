@@ -19,6 +19,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { SliderModule } from 'primeng/slider';
 import { TableModule } from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
+import { TreeTableModule } from 'primeng/treetable';
 
 import { ActivitiesComponent } from './project-form/activities/activities.component';
 import { AnnexesComponent } from './project-form/annexes/annexes.component';
@@ -73,6 +74,7 @@ import { SharedModule } from '@shared/shared.module';
     SliderModule,
     TableModule,
     TabViewModule,
+    TreeTableModule,
   ],
 })
 export class ProjectModule {}

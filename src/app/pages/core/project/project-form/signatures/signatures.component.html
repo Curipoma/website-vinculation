@@ -1,1 +1,24 @@
-<p>signatures works!</p>
+<h3 class="px-1 py-5">Firmas</h3>
+
+<p-table
+  [columns]="cols2"
+  [value]="products2"
+  responsiveLayout="scroll"
+  [rows]="3"
+  [paginator]="true"
+>
+  <ng-template pTemplate="header" let-columns>
+    <tr>
+      <th *ngFor="let col of columns">
+        {{ col.header }}
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns">
+        {{ rowData[col.field] }}
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpInterceptorProviders } from './interceptors';
 import { HttpClientModule } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { DropdownModule } from 'primeng/dropdown';
 import {
   FooterComponent,
   TopbarComponent,
@@ -44,6 +45,7 @@ import { CardModule } from 'primeng/card';
     MenubarModule,
     InputTextModule,
     CardModule,
+    DropdownModule
   ],
   providers: [
     {

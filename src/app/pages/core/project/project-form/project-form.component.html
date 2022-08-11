@@ -37,7 +37,7 @@
   <p-tabPanel 
     header="general-data"
     leftIcon="pi pi-folder-open"
-    [selected]="true"
+    
   >
     <app-general-data></app-general-data>
   </p-tabPanel> 
@@ -53,7 +53,7 @@
   <p-tabPanel header="workplan" leftIcon="pi pi-th-large">
     <app-workplan></app-workplan>
   </p-tabPanel>
-  <p-tabPanel header="signatures" leftIcon="pi pi-file">
+  <p-tabPanel header="signatures" leftIcon="pi pi-file" [selected]="true">
     <app-signatures></app-signatures>
   </p-tabPanel>
   <p-tabPanel header="bibliographies" leftIcon="pi pi-database">

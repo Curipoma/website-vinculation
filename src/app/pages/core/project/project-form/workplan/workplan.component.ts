@@ -18,8 +18,6 @@ export class WorkplanComponent implements OnInit {
   cols: any[];
 
   //////////
-  
- 
 
   constructor() {
     this.description =
@@ -118,7 +116,6 @@ export class WorkplanComponent implements OnInit {
         obj: 'La iglesia Ejército de Salvación Cuerpo Quito Sur es una organización sin fines de lucro, trabaja en el sector sur de Quito, actualmente la iglesia se encuentra en situación de riesgo debido a que podría perder el fondo de Caridad Social que recibe para sus proyectos que contribuyen al bienestar integral de la sociedad a través de las actividades religiosas , cuenta con 165 miembros entre niños y jóvenes de escasos recursos y en situación de vulnerabilidad dentro y fuera del hogar, los cuales reciben desayuno, almuerzo y un refrigerio por la tarde, además de apoyo económico para la compra de medicinas y citas médicas, realizan actividades de profesionales o tutores enviados por los programas de apadrinamiento. También cuenta con 34 adultos mayores de 60 años en situación de vulnerabilidad, abandono o sin hogar a los cuales se les brinda el desayuno, almuerzo, y un refrigerio además de un apoyo para las citas médicas y medicinas, en este caso las actividades las realiza el tutor enviado por el Municipio de la ciudad de Quito.',
       },
     ];
-    
   }
   ngOnInit(): void {
     throw new Error('Method not implemented.');

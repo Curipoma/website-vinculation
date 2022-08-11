@@ -10,7 +10,6 @@ import { DropdownModule } from 'primeng/dropdown';
 import {
   FooterComponent,
   TopbarComponent,
-  SidebarComponent,
   BlankComponent,
   MainComponent,
   BreadcrumbComponent,
@@ -30,7 +29,6 @@ import { CardModule } from 'primeng/card';
     BreadcrumbComponent,
     FooterComponent,
     MainComponent,
-    SidebarComponent,
     TopbarComponent,
   ],
   imports: [

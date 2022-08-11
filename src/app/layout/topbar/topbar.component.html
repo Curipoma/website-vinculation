@@ -1,10 +1,7 @@
-<p-menubar [model]="items">
+<p-menubar [model]="items" styleClass="bg-yellow-500">
   <ng-template pTemplate="start">
-
-  <div class="bg-white"><img src="assets/images/logo.png" height="40" class="mr-2"/> </div>
-  </ng-template>
-  
-  <ng-template pTemplate="end">
-    <input type="text" pInputText placeholder="Search" />
+    <div>
+      <img src="assets/images/logo.png" height="40" class="mr-2" />
+    </div>
   </ng-template>
 </p-menubar>

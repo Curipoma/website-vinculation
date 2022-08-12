@@ -4,6 +4,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '@shared/shared.module';
+
 import { CheckboxModule } from 'primeng/checkbox';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
@@ -11,6 +12,8 @@ import { RippleModule } from 'primeng/ripple';
 import { CardModule } from 'primeng/card';
 import { PasswordModule } from 'primeng/password';
 import { DividerModule } from 'primeng/divider';
+import { ToolbarModule } from 'primeng/toolbar';
+
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { PasswordChangeComponent } from './password-change/password-change.component';
 
@@ -33,6 +36,7 @@ import { PasswordChangeComponent } from './password-change/password-change.compo
     InputTextModule,
     PasswordModule,
     RippleModule,
+    ToolbarModule,
   ],
 })
 export class AuthModule {}

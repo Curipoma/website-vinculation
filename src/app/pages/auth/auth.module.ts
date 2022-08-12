@@ -16,12 +16,16 @@ import { ToolbarModule } from 'primeng/toolbar';
 
 import { PasswordResetComponent } from './password-reset/password-reset.component';
 import { PasswordChangeComponent } from './password-change/password-change.component';
+import { RestoreComponent } from './restore/restore.component';
+import { NewPasswordComponent } from './new-password/new-password.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     PasswordChangeComponent,
     PasswordResetComponent,
+    RestoreComponent,
+    NewPasswordComponent,
   ],
   exports: [PasswordChangeComponent],
   imports: [

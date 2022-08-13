@@ -1,0 +1,57 @@
+<style>
+  #botonP{
+    margin-top: 10px;
+  }
+</style>
+<p-card header="Estudiantes">
+    <ul class="grid">
+        <li *ngFor="let student of students" class="col-2">
+          <p-card [header]="student.name" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+              <img alt="Card" src="https://source.unsplash.com/collection/881002" />
+            </ng-template>
+            <div class="flex flex-column">
+                <div class="flex gap-2 flex-row">
+                    <span>Cedula: </span>
+                    <span class="px-2 py-5rem bg-yellow-500 text-gray-900">{{student.cedula}}</span>
+                </div>
+              <div class="flex gap-2 flex-row">
+                <span>Nivel: </span>
+                <span class="px-2 py-5rem bg-yellow-500 text-gray-900">{{student.grade}}</span>
+              </div>
+
+              <div class="flex gap-2 flex-row">
+                <span>Modalidad: </span>
+                <span class="px-2 py-5rem bg-yellow-500 text-gray-900">
+                  {{ student.modality }}
+                </span>
+              </div>
+
+              <div class="flex gap-2 flex-row">
+                <span>Carrera: </span>
+                <span class="px-2 py-5rem bg-yellow-500 text-gray-900">
+                  {{ student.career }}
+                </span>
+              </div>
+
+              <div class="flex gap-2 flex-row">
+                <span>Estado: </span>
+                <span class="px-2 py-5rem bg-yellow-500 text-gray-900">
+                  {{ student.state }}
+                </span>
+              </div>
+            </div>
+            <button
+            id="botonP"
+            pButton
+            type="button"
+            class="p-button-primary p-button-rounded mr-2"
+            icon="pi pi-save"
+            (click)="showModal()"
+            label="Asignar a proyecto"
+          ></button>
+          </p-card>
+        </li>
+      </ul>
+      <p-paginator [rows]="10" [totalRecords]="100"></p-paginator>
+</p-card>

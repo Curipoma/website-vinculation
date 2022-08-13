@@ -1,0 +1,83 @@
+<h1>Asignacion de proyectos</h1>
+
+<style>
+    .p-fluid{
+        padding: 1%;
+    }
+</style>
+<div class="p-fluid grid">
+    <div class="field col-6">
+        <span class="p-float-label">
+            <p-dropdown [disabled]="false"
+              [options]="careers"
+              optionLabel="name"
+              [filter]="true"
+              filterBy="name"
+              [showClear]="true"
+              placeholder="Select career"
+            >
+            </p-dropdown>
+            <label for="inputtext">Carrera</label>
+          </span>
+      </div>
+
+      <div class="field col-6">
+        <span class="p-float-label">
+            <p-dropdown [disabled]="false"
+              [options]="teachers"
+              optionLabel="name"
+              [filter]="true"
+              filterBy="name"
+              [showClear]="true"
+              placeholder="Seleccione el docente"
+            >
+            </p-dropdown>
+            <label for="inputtext">Nombre del docente</label>
+          </span>
+      </div>
+    
+      <div class="field col-6">
+        <span class="p-float-label">
+            <p-dropdown [disabled]="false"
+              [options]="projects"
+              optionLabel="name"
+              [filter]="true"
+              filterBy="name"
+              [showClear]="true"
+              placeholder="Seleccione el proyecto"
+            >
+            </p-dropdown>
+            <label for="inputtext">Nombre del proyecto</label>
+          </span>
+      </div>
+
+      <div class="field col-6">
+        <span class="p-float-label">
+            <p-dropdown [disabled]="false"
+              [options]="projectCode"
+              optionLabel="name"
+              [filter]="true"
+              filterBy="name"
+              [showClear]="true"
+              placeholder="Seleccione el codigo"
+            >
+            </p-dropdown>
+            <label for="inputtext">Codigo del proyecto</label>
+          </span>
+      </div>
+
+      <div class="field col-6">
+        <span class="p-float-label">
+            <p-dropdown [disabled]="false"
+              [options]="cycle"
+              optionLabel="name"
+              [filter]="true"
+              filterBy="name"
+              [showClear]="true"
+              placeholder="Seleccione el ciclo"
+            >
+            </p-dropdown>
+            <label for="inputtext">ciclo</label>
+          </span>
+      </div>
+</div>

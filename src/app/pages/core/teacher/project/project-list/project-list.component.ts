@@ -349,6 +349,9 @@ export class ProjectListComponent implements OnInit {
   edit(id: number) {
     this.router.navigate(['/core/teacher/projects/', id]);
   }
+  new() {
+    this.router.navigate(['/core/teacher/projects', 1]);
+  }
   remove(id: number) {
     this.projects = this.projects.filter((project) => project.id != id);
   }

@@ -35,6 +35,9 @@ import { SliderModule } from 'primeng/slider';
 import { TableModule } from 'primeng/table';
 import { TabViewModule } from 'primeng/tabview';
 import { SharedModule } from '@shared/shared.module';
+import { ProjectsAssignmentComponent } from './project/project-form/projects-assignment/projects-assignment.component';
+import { StudentsAvailabilityComponent } from './project/project-form/students-availability/students-availability.component';
+
 
 
 @NgModule({
@@ -53,6 +56,8 @@ import { SharedModule } from '@shared/shared.module';
     ProjectFormComponent,
     SignaturesComponent,
     WorkplanComponent,
+    ProjectsAssignmentComponent,
+    StudentsAvailabilityComponent,
   ],
   imports: [
     CalendarModule,

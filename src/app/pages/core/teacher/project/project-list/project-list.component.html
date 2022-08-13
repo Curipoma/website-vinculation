@@ -1,6 +1,15 @@
-<p-card header="Projects">
+<p-card header="Projectos">
+  <button 
+        pButton
+        type="button"
+        class="p-button-primary p-button-rounded mr-2"
+        icon="pi pi-file"
+        pTooltip="nuevo"
+        label="Nuevo"
+        (click)="new()"
+      ></button>
   <div class="flex flex-row">
-    <p-card header="career">
+    <p-card header="Carrera">
       <p-dropdown
         [options]="careers"
         optionLabel="name"
@@ -11,13 +20,13 @@
       >
       </p-dropdown>
     </p-card>
-    <p-card header="project">
+    <p-card header="Projecto">
       <span class="p-input-icon-left">
         <i class="pi pi-search"></i>
         <input type="text" pInputText placeholder="Search" />
       </span>
     </p-card>
-    <p-card header="state">
+    <p-card header="Estado">
       <p-dropdown
         [options]="states"
         optionLabel="name"
